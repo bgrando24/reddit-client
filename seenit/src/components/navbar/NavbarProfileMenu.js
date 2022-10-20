@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {CgProfile} from 'react-icons/cg';
+import { ProfileDropdown } from './ProfileDropdown';
 import './ProfileMenu.css';
 
 export function NavbarProfileMenu() {
@@ -20,12 +21,17 @@ export function NavbarProfileMenu() {
         }
         
     }
+
     
     return (
+        <>
         <div onClick={handleMenuClick} className='flex items-center cursor-pointer'>
             <CgProfile size="22"/>
-            <ProfileMenuArrow menuOpen={menuOpen}/>
+            <ProfileMenuArrow menuOpen={menuOpen}/> 
         </div>
+        
+        <ProfileDropdown menuOpen={menuOpen}/>
+        </>
     )
 }
 

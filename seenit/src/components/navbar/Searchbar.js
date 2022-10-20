@@ -8,7 +8,7 @@ export function Searchbar() {
         <div className='flex-1 bg-gray-200 rounded-3xl w-full'>
             <form className='flex items-center'>
 
-                <label for='searchbar'>
+                <label htmlFor='searchbar'>
                     <CiSearch size="23" className='ml-2'/>
                 </label>
 

@@ -1,11 +1,12 @@
 import { Logo } from "./Logo";
+import { Searchbar } from "./Searchbar";
 
 export function Navbar() {
     return (
-        <div className="flex justify-between items-center bg-white h-[48px]">
-            <div className="px-5"><Logo /></div> 
-            <div className="px-5">Search bar</div>
-            <div className="px-5">Profile</div>
+        <div className=" inline-flex justify-between items-center bg-white h-[48px] w-screen">
+            <div className="ml-5"><Logo /></div> 
+            <div className="container mx-5 flex-1 max-w-[654px]"><Searchbar /></div>
+            <div className="mr-2 ">Profile</div>
         </div>
     )
 }

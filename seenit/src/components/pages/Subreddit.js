@@ -1,4 +1,4 @@
-import { Articles } from "../feed/Articles";
+import { Articles } from "../feed/articles/Articles";
 
 export function Subreddit({ subreddit }) {
     return (

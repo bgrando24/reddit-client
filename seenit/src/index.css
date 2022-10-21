@@ -2,9 +2,11 @@ body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: rgb(219, 224, 229);
+  overflow-x: hidden;
 }
 
 html {
+  overflow-x: hidden;
   background-color: rgb(219, 224, 229);
 }
 

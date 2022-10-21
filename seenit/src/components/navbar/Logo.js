@@ -12,7 +12,7 @@ export function Logo() {
 
     return (
         <div className='cursor-pointer'>
-            <Link to=''>
+            <Link to='/home'>
             <div className=' bg-blue-500 p-2 rounded-full'>
                 <FaCat color='white'/>
             </div>

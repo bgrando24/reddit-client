@@ -1,34 +1,30 @@
 
+import  { Link, redirect } from 'react-router-dom';
 import {CiSearch} from 'react-icons/ci';
-
 import './Searchbar.css';
 
-export function Searchbar() {
+export function Searchbar({ subreddit, setSubreddit}) {
     return (
+
         <div className='flex-1 bg-gray-200 rounded-3xl w-full'>
-            <form className='flex items-center'>
+
+            <form
+                onSubmit={e => {
+                    e.preventDefault();
+                    setSubreddit(e.target.searchbar.value); //gets the value from the input field 
+                    }} 
+                className='flex items-center'>
 
                 <label htmlFor='searchbar'>
-                    <CiSearch size="23" className='ml-2'/>
+                    <button className='flex items-center' type='submit'> <CiSearch size="23" className='ml-2'/> </button>
                 </label>
 
-                <div className="flex items-center cursor-pointer  bg-gray-200 rounded-3xl">
-                        <input id='searchbar' type="text" placeholder="Search Seenit" className=' h-10 pl-4 bg-gray-200 rounded-3xl focus:border-orange-600'/>
+                <div className="flex items-center cursor-pointer  bg-gray-200 rounded-3xl w-full">
+                        <input id='searchbar' type="text" placeholder="Search Seenit" className=' h-10 w-full pl-4 bg-gray-200 rounded-3xl focus:border-orange-600'/>
                     </div>
             </form>
+            
         </div>
+
     )
 }
-
-
-{/* <form>
-    <label>
-        <input />
-    </label>
-</form>
-
-
-<div className="flex items-center cursor-pointer  bg-gray-200 rounded-3xl">
-        <CiSearch size="23" className='mr-1'/>
-            <input type='text' placeholder="Search Seenit" className=' h-10 pl-4 bg-gray-200 rounded-3xl'/>
-        </div> */}

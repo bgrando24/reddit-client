@@ -26,7 +26,14 @@ function App() {
           <Route path='/see' element={
             <>
               <Navbar subreddit={subreddit} setSubreddit={setSubreddit} />
-              <Subreddit subreddit={subreddit} />
+              <Subreddit subreddit={subreddit} setSubreddit={setSubreddit}/>
+            </>
+          } />
+
+          <Route path='/see/:sr' element={
+            <>
+              <Navbar subreddit={subreddit} setSubreddit={setSubreddit} />
+              <Subreddit subreddit={subreddit} setSubreddit={setSubreddit} />
             </>
           } />
 

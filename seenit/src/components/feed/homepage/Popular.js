@@ -39,6 +39,7 @@ export function Popular({ setSubreddit }) {
     // fetch the reddit API data on mounting of component or changing of subreddit
     useEffect( ()=> {
         fetchPopular();
+        setSubreddit('');
     }
     , []);  //only run on mounting
 
@@ -53,12 +54,13 @@ export function Popular({ setSubreddit }) {
 
     return (
         <div className="flex flex-col items-center">
+            <h1 className="text-center font-bold text-lg my-5">Popular Subreddits</h1>
             {
                 popularSubreddits.map((sub, i) => {
                     return (
                         <Link 
                             key={i}
-                            // to='/see' 
+                            to={`/see/${sub.data.display_name}`}
                             id={sub.data.title}
                             className="container flex flex-col justify-between bg-white p-1 my-3 max-w-[700px] min-h-[60px] cursor-pointer hover:scale-105 duration-100"
                         >

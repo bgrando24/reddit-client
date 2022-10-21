@@ -1,10 +1,10 @@
 import { Articles } from "../feed/articles/Articles";
 import { Popular } from "../feed/homepage/Popular";
 
-export function Frontpage({ subreddit }) {
+export function Frontpage({ setSubreddit }) {
     return (
         <div>
-            <Popular />
+            <Popular setSubreddit={setSubreddit}/>
         </div>
     )
 }

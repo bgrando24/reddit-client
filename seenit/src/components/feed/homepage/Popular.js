@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import './Popular.css';
 
-export function Popular() {
+export function Popular({ setSubreddit }) {
 
     // holds the articles to display
     const [popularSubreddits, setPopularSubreddits] = useState([]);
@@ -20,7 +22,7 @@ export function Popular() {
             const loadedArticles = await articleRequest.json().then(data => {
 
                 if(data !== null) {
-                    console.log(data.data.children);
+                    // console.log(data.data.children);
                     setPopularSubreddits(data.data.children);
 
                 } else {
@@ -41,15 +43,36 @@ export function Popular() {
     , []);  //only run on mounting
 
 
+    // handles changing the subreddit state when user navigates to see a specific subreddit
+    const handleSeeSubreddit = (e) => {
+        e.preventDefault();
+        console.log("Subreddit: " + e.target.id);
+    }
+
+
+
     return (
-        <div>
+        <div className="flex flex-col items-center">
             {
-                popularSubreddits.map(sub => {
+                popularSubreddits.map((sub, i) => {
                     return (
-                        <div className="flex flex-col justify-between bg-white p-1 my-3 h-20">
-                            <h1>r/{sub.data.display_name}</h1>
-                            <p className=" text-sm opacity-80">{sub.data.public_description.length > 80 ? sub.data.public_description.slice(0,81) + "..." : sub.data.public_description}</p>
-                        </div>
+                        <Link 
+                            key={i}
+                            // to='/see' 
+                            id={sub.data.title}
+                            className="container flex flex-col justify-between bg-white p-1 my-3 max-w-[700px] min-h-[60px] cursor-pointer hover:scale-105 duration-100"
+                        >
+
+                            <div className="flex items-center justify-between mx-5">
+                                <h1 className="text-lg">r/{sub.data.display_name}</h1>
+                                <img src={sub.data.header_img} className="w-min max-h-10 my-2" />
+                            </div>
+
+                            <p className=" text-sm opacity-50">
+                                {sub.data.public_description.length > 80 ? sub.data.public_description.slice(0,81) + "..." : sub.data.public_description}
+                            </p>
+
+                        </Link>
                     )
                 })
             }

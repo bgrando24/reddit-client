@@ -40,13 +40,15 @@ export function Articles({ subreddit }) {
     useEffect( ()=> {
         fetchArticles();
         console.log("Subreddit changed to: " + subreddit);
+        console.log(articles);
     }
     , [subreddit]);    //subreddit as a dependency means the articles will update each time the subreddit is changed
 
+    
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center"> 
 
-        <ArticlesHeader articles={articles} />
+        { articles.length == 0 ? <><ArticlesHeader articles={articles} />
         
         {
             articles.map( (article, i) => {
@@ -55,6 +57,10 @@ export function Articles({ subreddit }) {
                 )
             })
         }
+        </>
+        : <div className="container mx-auto bg-white my-5 py-4 w-1/4 text-center rounded-lg">Serarch for something!</div>
+        }
         </div>
+        
     )
 }

@@ -33,7 +33,7 @@ function App() {
           <Route path='/home' element={
             <>
               <HomeNavbar />
-              <Frontpage />
+              <Frontpage setSubreddit={setSubreddit}/>
             </>
           } />
 

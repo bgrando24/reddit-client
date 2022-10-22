@@ -19,12 +19,12 @@ export function ProfileDropdown({ menuOpen }) {
 
     if (menuOpen) {
         return (
-            <div className="fixed right-5 top-10 w-[252px] h-[90vh] max-h-[600px] bg-white border border-gray-400 rounded-md z-10 duration-150">
+            <div className="fixed right-5 top-10 w-[252px] h-[90vh] max-h-[600px] bg-white border border-gray-400 rounded-md z-10 duration-150 dark:bg-[#1B1A1B]">
                 <div className='flex flex-col justify-around h-full'>
                     {
                         profileMenuItems.map(item => {
                             return (
-                                <div key={item.name} className='flex items-center bg-gray-100 h-[13%] mx-1 rounded-lg cursor-pointer hover:scale-95 hover:bg-gray-300 duration-150'>
+                                <div key={item.name} className='flex items-center bg-gray-100 h-[13%] mx-1 rounded-lg cursor-pointer hover:scale-95 hover:bg-gray-300 duration-150 dark:bg-'>
                                     <Link to={item.path} className='flex items-center h-full w-full'>
                                         <span className='ml-4'>{item.icon}</span>
                                         <span className='ml-2'>{item.name}</span>
@@ -39,7 +39,7 @@ export function ProfileDropdown({ menuOpen }) {
 
     } else {
         return (
-            <div className=" content-none duration-150"></div>
+            <div className="content-none duration-150"></div>
         )
     }
         

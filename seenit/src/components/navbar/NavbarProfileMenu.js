@@ -26,10 +26,10 @@ export function NavbarProfileMenu() {
     return (
         <>
         <div onClick={handleMenuClick} className='flex items-center cursor-pointer'>
-            <CgProfile size="22"/>
+            <CgProfile size="22" className='dark:text-white'/>
             <ProfileMenuArrow menuOpen={menuOpen}/> 
         </div>
-        
+
         <ProfileDropdown menuOpen={menuOpen}/>
         </>
     )
@@ -41,8 +41,8 @@ function ProfileMenuArrow({ menuOpen }) {
 
     return (
         <>
-            <div id='navbar-profile-menu-arrow-left' className='bg-black h-[2px] w-3 transition rotate-45 translate-x-1'></div>
-            <div id='navbar-profile-menu-arrow-right' className='bg-black h-[2px] w-3 transition -rotate-45 '></div>
+            <div id='navbar-profile-menu-arrow-left' className='bg-black h-[2px] w-3 transition rotate-45 translate-x-1 dark:bg-white'></div>
+            <div id='navbar-profile-menu-arrow-right' className='bg-black h-[2px] w-3 transition -rotate-45 dark:bg-white'></div>
         </>
     )
 }

@@ -6,7 +6,7 @@ import { Searchbar } from "./Searchbar";
 
 export function Navbar({ subreddit, setSubreddit}) {
     return (
-        <div className="inline-flex justify-between items-center bg-white h-[48px] w-screen z-20 shadow dark:bg-gray-500">
+        <div className="inline-flex justify-between items-center bg-white h-[48px] w-screen z-20 shadow dark:bg-[#1B1A1B] duration-1000">
             <div className="ml-5"><Logo /></div> 
             <div className="container mx-5 flex-1 max-w-[654px]"><Searchbar subreddit={subreddit} setSubreddit={setSubreddit}/></div>
             <div className="mr-4 "><NavbarProfileMenu /></div>
@@ -16,7 +16,7 @@ export function Navbar({ subreddit, setSubreddit}) {
 
 export function HomeNavbar() {
     return (
-        <div className="inline-flex justify-between items-center bg-white h-[48px] w-screen z-20 shadow dark:bg-gray-500">
+        <div className="inline-flex justify-between items-center bg-white h-[48px] w-screen z-20 shadow dark:bg-[#1B1A1B] duration-1000">
             <div className="ml-5"><Logo /></div> 
             <div className="container flex justify-center mx-5 max-w-[654px]"><SearchSubreddits /></div>
             <div className="mr-4 "><NavbarProfileMenu /></div>

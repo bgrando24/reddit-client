@@ -8,6 +8,7 @@ import { Profile } from './components/profile/Profile';
 import { useState } from 'react';
 import { HomeNavbar } from './components/navbar/Navbar';
 import { Subreddit } from './components/pages/Subreddit';
+import { Settings } from './components/settings/Settings';
 
 function App() {
 
@@ -48,6 +49,13 @@ function App() {
             <>
               <HomeNavbar />
               <Profile />
+            </>
+          } />
+
+          <Route path='/settings' element ={
+            <>
+              <HomeNavbar />
+              <Settings />
             </>
           } />
 

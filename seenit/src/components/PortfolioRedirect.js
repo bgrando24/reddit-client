@@ -10,7 +10,7 @@ export function PortfolioRedirect() {
     })
 
     return (
-        <div className="flex flex-col items-center text-3xl h-screen">
+        <div className="flex flex-col items-center text-3xl h-screen dark:text-white">
             <h1 className="my-10">Redirecting you...</h1>
             <AiOutlineLoading3Quarters 
                 size="100"

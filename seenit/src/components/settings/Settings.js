@@ -18,7 +18,7 @@ export function Settings() {
 
 
     return (
-        <div className="dark:bg-[#030303] duration-1000">
+        <div>
             <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             <p className="text-center dark:text-white">{darkMode ? "Dark Mode" : "Light Mode"}</p>
         </div>
@@ -41,10 +41,16 @@ function DarkModeToggle({ darkMode, setDarkMode }) {
             document.querySelector("html").classList.add("dark");
             document.querySelector("html").style.backgroundColor = "rgb(3 3 3)";
             document.querySelector("html").style.transition = "1s";
+            document.querySelector("body").style.backgroundColor = "rgb(3 3 3)";
+            document.querySelector("body").style.transition = "1s";
+            
+            
         } else {
             console.log("Dark mode NOT detected");
             document.querySelector("html").classList.remove("dark");
             document.querySelector("html").style.backgroundColor = "";
+            document.querySelector("body").classList.remove("dark");
+            document.querySelector("body").style.backgroundColor = "";
         }
     }
 

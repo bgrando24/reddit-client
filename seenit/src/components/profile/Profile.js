@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export function Profile() {
     return (
-        <div className="container relative mx-auto w-[95%] my-[5%] h-[70vh] bg-white rounded-md shadow">
+        <div className="container relative mx-auto w-[95%] my-[5%] h-[70vh] bg-white rounded-md shadow dark:bg-[#1B1A1B] dark:text-white">
 
             <div className="relative top-0 w-full h-1/4 rounded-md bg-gradient-to-br from-blue-500 to-blue-400">
                 <h1 className="relative top-10 text-center text-3xl">Welcome Brandon!</h1>
@@ -21,7 +21,7 @@ export function Profile() {
 
                         <span className='flex flex-col ml-20'>
                             <span className='font-bold'>Score</span> 
-                            <p className='inline-flex items-center text-blue-500'> <RiCopperCoinLine className='mr-2 text-black'/> 100</p>
+                            <p className='inline-flex items-center text-blue-500'> <RiCopperCoinLine className='mr-2 text-black dark:text-white'/> 100</p>
                         </span>
                         
                         <span className='flex flex-col mr-5'> 

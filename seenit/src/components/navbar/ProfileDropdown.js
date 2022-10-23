@@ -24,7 +24,7 @@ export function ProfileDropdown({ menuOpen }) {
                     {
                         profileMenuItems.map(item => {
                             return (
-                                <div key={item.name} className='flex items-center bg-gray-100 h-[13%] mx-1 rounded-lg cursor-pointer hover:scale-95 hover:bg-gray-300 duration-150 dark:bg-'>
+                                <div key={item.name} className='flex items-center bg-gray-100 h-[13%] mx-1 rounded-lg cursor-pointer hover:scale-95 hover:bg-gray-300 duration-150 dark:bg-[#272729] dark:text-white dark:border border-gray-500'>
                                     <Link to={item.path} className='flex items-center h-full w-full'>
                                         <span className='ml-4'>{item.icon}</span>
                                         <span className='ml-2'>{item.name}</span>

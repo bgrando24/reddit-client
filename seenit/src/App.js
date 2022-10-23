@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { HomeNavbar } from './components/navbar/Navbar';
 import { Subreddit } from './components/pages/Subreddit';
 import { Settings } from './components/settings/Settings';
+import { About } from './components/about/About';
 
 function App() {
 
@@ -56,6 +57,13 @@ function App() {
             <>
               <HomeNavbar />
               <Settings />
+            </>
+          } />
+
+          <Route path='/about' element ={
+            <>
+              <HomeNavbar />
+              <About />
             </>
           } />
 

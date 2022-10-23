@@ -10,7 +10,7 @@ const profileMenuItems = [
     {name: "Profile",           icon: <MdOutlineAccountCircle />,   path: "/profile"},
     {name: "Settings",          icon: <IoSettingsOutline />,        path: "/settings"},
     {name: "About this app",    icon: <AiOutlineInfoCircle />,      path: "/about"},
-    {name: "Logout",            icon: <IoLogOutOutline />,          path: "/logout"},
+    {name: "Portfolio website", icon: <IoLogOutOutline />,          path: "/portfolio"},
 ];
 
 

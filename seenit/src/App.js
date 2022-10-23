@@ -10,6 +10,7 @@ import { HomeNavbar } from './components/navbar/Navbar';
 import { Subreddit } from './components/pages/Subreddit';
 import { Settings } from './components/settings/Settings';
 import { About } from './components/about/About';
+import { PortfolioRedirect } from './components/PortfolioRedirect';
 
 function App() {
 
@@ -65,6 +66,10 @@ function App() {
               <HomeNavbar />
               <About />
             </>
+          } />
+
+          <Route path='/portfolio' element ={
+            <PortfolioRedirect />
           } />
 
         </Routes>

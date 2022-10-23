@@ -52,7 +52,7 @@ export function Articles({ subreddit, setSubreddit }) {
 
     
     return (
-        <div className="flex flex-col items-center"> 
+        <div className="flex flex-col items-center dark:bg-[#030303]"> 
 
         { articles.length !== 0 ? <><ArticlesHeader articles={articles} />
         
@@ -64,7 +64,7 @@ export function Articles({ subreddit, setSubreddit }) {
             })
         }
         </>
-        : <div className="container mx-auto bg-white my-5 py-4 w-1/4 text-center rounded-lg">Search for something!</div>
+        : <div className="container mx-auto bg-white my-5 py-4 w-1/4 text-center rounded-lg dark:bg-[#1B1A1B] dark:text-white">Search for something!</div>
         }
         </div>
         

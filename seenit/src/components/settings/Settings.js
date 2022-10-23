@@ -6,9 +6,21 @@ export function Settings() {
     const [darkMode, setDarkMode] = useState(false);
 
 
+    useState(()=> {
+        if(document.querySelector("html").classList.contains('dark')) {
+            setDarkMode(true);
+            // console.log('Dark mode set by useEffect');
+        } else {
+            setDarkMode(false);
+            // console.log('Light mode set by useEffect');
+        }
+    });
+
+
     return (
         <div className="dark:bg-[#030303] duration-1000">
             <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+            <p className="text-center dark:text-white">{darkMode ? "Dark Mode" : "Light Mode"}</p>
         </div>
     )
 }
@@ -22,6 +34,7 @@ function DarkModeToggle({ darkMode, setDarkMode }) {
     const toggleDarkMode = () => {
 
         setDarkMode(!darkMode);
+        // console.log(darkMode);
 
         if(!darkMode) {
             console.log("Dark mode detected");

@@ -53,8 +53,8 @@ export function Popular({ setSubreddit }) {
 
 
     return (
-        <div className="flex flex-col items-center">
-            <h1 className="text-center font-bold text-lg my-5">Popular Subreddits</h1>
+        <div className="flex flex-col items-center dark:bg-[#030303]">
+            <h1 className="text-center font-bold text-lg my-5 dark:text-white">Popular Subreddits</h1>
             {
                 popularSubreddits.map((sub, i) => {
                     return (
@@ -62,7 +62,7 @@ export function Popular({ setSubreddit }) {
                             key={i}
                             to={`/see/${sub.data.display_name}`}
                             id={sub.data.title}
-                            className="container flex flex-col justify-between bg-white p-1 my-3 max-w-[700px] min-h-[60px] cursor-pointer hover:scale-105 duration-100"
+                            className="container flex flex-col justify-between bg-white p-1 my-3 max-w-[700px] min-h-[60px] cursor-pointer rounded-md hover:scale-105 duration-100 dark:bg-[#1B1A1B] dark:text-white dark:border border-gray-500"
                         >
 
                             <div className="flex items-center justify-between mx-5">

@@ -13,7 +13,7 @@ export function ArticlesHeader({ articles }) {
     // const sentenceCaseString = subredditString[0].toUpperCase() + subredditString.slice(1);
 
     return (
-        <div className="flex flex-col items-center w-full bg-white my-5">
+        <div className="flex flex-col items-center w-[90%] max-w-[700px] rounded-md bg-white my-5 dark:bg-[#030303] dark:text-white">
             <h1 className="font-bold">{sentenceCaseString ? sentenceCaseString : ""}</h1>
             <span className="flex my-1 p-1 bg-blue-500 text-white rounded-lg hover:scale-110 duration-150 ease-linear">
                 <a href={`https://www.reddit.com/r/${subredditString}`}>View r/{sentenceCaseString} in Reddit</a>

@@ -24,7 +24,7 @@ function App() {
 
         <Routes>
 
-          <Route path='/' element={<Navigate to='/reddit-client' />} />
+          {/* <Route path='/' element={<Navigate to='/reddit-client' />} /> */}
 
           <Route path='/reddit-client/see' element={
             <>

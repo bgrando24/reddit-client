@@ -26,49 +26,49 @@ function App() {
 
           <Route path='/reddit-client' element={<Navigate to='/home' />} />
 
-          <Route path='/see' element={
+          <Route path='/reddit-client/see' element={
             <>
               <Navbar subreddit={subreddit} setSubreddit={setSubreddit} />
               <Subreddit subreddit={subreddit} setSubreddit={setSubreddit}/>
             </>
           } />
 
-          <Route path='/see/:sr' element={
+          <Route path='/reddit-client/see/:sr' element={
             <>
               <Navbar subreddit={subreddit} setSubreddit={setSubreddit} />
               <Subreddit subreddit={subreddit} setSubreddit={setSubreddit} />
             </>
           } />
 
-          <Route path='/home' element={
+          <Route path='/reddit-client/home' element={
             <>
               <HomeNavbar />
               <Frontpage setSubreddit={setSubreddit}/>
             </>
           } />
 
-          <Route path='/profile' element={
+          <Route path='/reddit-client/profile' element={
             <>
               <HomeNavbar />
               <Profile />
             </>
           } />
 
-          <Route path='/settings' element ={
+          <Route path='/reddit-client/settings' element ={
             <>
               <HomeNavbar />
               <Settings />
             </>
           } />
 
-          <Route path='/about' element ={
+          <Route path='/reddit-client/about' element ={
             <>
               <HomeNavbar />
               <About />
             </>
           } />
 
-          <Route path='/portfolio' element ={
+          <Route path='/reddit-client/portfolio' element ={
             <PortfolioRedirect />
           } />
 

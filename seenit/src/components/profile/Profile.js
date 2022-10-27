@@ -33,8 +33,8 @@ export function Profile() {
                     </div>
 
                     <div className='w-full my-10 flex justify-center'>
-                        <Link className=' flex items-center bg-orange-600 px-10 py-2 text-white font-bold rounded-3xl hover:bg-orange-700 duration-150'>
-                            Logout
+                        <Link to='reddit-client/' className=' flex items-center bg-orange-600 px-10 py-2 text-white font-bold rounded-3xl hover:bg-orange-700 duration-150'>
+                            Home
                         </Link>
                     </div>
 

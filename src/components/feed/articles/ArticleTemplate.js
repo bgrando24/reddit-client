@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export function ArticleTemplate({ article }) {
     return (
-        <Link to={`/article/${article.data.title}`} className="cursor-pointer bg-white rounded border w-[90%] max-w-[700px] my-1 p-3 h-max dark:bg-[#1B1A1B] dark:text-white dark:border-gray-500">
+        <div  className=" bg-white rounded border w-[90%] max-w-[700px] my-1 p-3 h-max dark:bg-[#1B1A1B] dark:text-white dark:border-gray-500">
 
             <p className="text-sm text-gray-400">Posted by u/{article.data.author_fullname}</p>
             <h3 className="font-bold">{article.data.title}</h3>
@@ -14,6 +14,8 @@ export function ArticleTemplate({ article }) {
                     className="w-auto h-auto" />
             </div>
 
-        </Link>
+        </div>
     )
 }
+
+// to={`/article/${article.data.title}`}

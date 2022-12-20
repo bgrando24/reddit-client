@@ -1,4 +1,4 @@
---- Seenit - A Reddit client clone ---
+# Seenit - A Reddit client clone
 
 This project is primarily to consume the publicly available Reddit API and utilise it within a Reddit-style client.
 

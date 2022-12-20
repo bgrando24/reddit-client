@@ -1,11 +1,7 @@
+# Seenit - A Reddit client clone
 
-Lightmode:
-background: rgb(219, 224, 229) -> #DBE0E5
-text: black
-component backgrounds: white
+This project is primarily to consume the publicly available Reddit API and utilise it within a Reddit-style client.
 
-Darkmode:
-background: rgb(3 3 3) -> #030303
-text: white
-component backgrounds: rgb(27 26 27) -> #1B1A1B
-alternative: rgb(39 39 41) -> #272729
+Reddit API: https://www.reddit.com/dev/api/
+
+The client features the ability to search for specific subreddits and displays daily popular subreddits.
